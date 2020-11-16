@@ -1,4 +1,5 @@
 package com.syngly_linked_list;
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,5 +25,6 @@ public class Main {
             }
         });
         l.showAll();
+        new MainForm();
     }
 }

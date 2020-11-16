@@ -1,7 +1,5 @@
 package com.syngly_linked_list;
 
-import java.util.concurrent.Callable;
-
 public class SinglyLinkedList<T extends Comparable<T>>{
     static class Element<T extends Comparable<T>> implements Comparable<SinglyLinkedList.Element<T>> {
         private T data;
@@ -16,6 +14,18 @@ public class SinglyLinkedList<T extends Comparable<T>>{
     Element<T> head = null;
     Element<T> tail = null;
     int count = 0;
+
+    T getData(int index){
+        Element<T> current = head;
+        for (int i = 0; current != null; i++) {
+            if (i == index) {
+                return current.data;
+            }
+            current = current.next;
+        }
+        System.out.println("Element ["+index+"] is not exists!");
+        return null;
+    }
 
     void insertElement(T data) {
         Element<T> newElement = new Element<>();
