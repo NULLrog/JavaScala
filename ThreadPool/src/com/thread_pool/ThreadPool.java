@@ -34,7 +34,7 @@ class Scheduler {
     private final ArrayList<Integer> tasks;
     public Scheduler(int n) {
         tasks = new ArrayList<>();
-        for( int i = 0; i < n; i++ ) {
+        for(int i = 0; i < n; i++) {
             tasks.add(i);
         }
         synchronized(this) {
